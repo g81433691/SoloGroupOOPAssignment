@@ -14,7 +14,7 @@ public class LoginPageGUI extends javax.swing.JFrame {
     public LoginPageGUI() {//start constructor
         initComponents();
         Administrator.createAdminsAccount();//when a instance of this class is called upon it will create admins
-        Student.createStudent();//when a instance of this class is called upon it will call uupon the create student method in the student class
+        //Commment this out as this logic is in karawans class//Student.createStudent();//when a instance of this class is called upon it will call uupon the create student method in the student class
     }//end constructor
 
     /**
@@ -202,12 +202,12 @@ public class LoginPageGUI extends javax.swing.JFrame {
             setVisible(false);//set the page to false visibility
             HomePage homePage = new HomePage();//creat a instance of the home page
             homePage.setVisible(true);//set the homepage to true visibility
-
-        } else if (Student.StudentLogin(email, enteredPassword)) {//if condition and send the entered emaul and password into the method as args and see if it matches an admins login credentials
-            JOptionPane.showMessageDialog(null, "Student has sucessfully logged in, Welcome!");//notify the end user with a joption pane popup
-            setVisible(false);//set the login page to false visibility
-            HomePage homePage = new HomePage();//creat a instance of the home page
-            homePage.setVisible(true);//set the home page to true visibility
+        //doesnt work without karawans student.java class
+        //} else if (Student.StudentLogin(email, enteredPassword)) {//if condition and send the entered emaul and password into the method as args and see if it matches an admins login credentials
+            //JOptionPane.showMessageDialog(null, "Student has sucessfully logged in, Welcome!");//notify the end user with a joption pane popup
+            //setVisible(false);//set the login page to false visibility
+            //HomePage homePage = new HomePage();//creat a instance of the home page
+            //homePage.setVisible(true);//set the home page to true visibility
         } else {//else if condition
 
             JOptionPane.showMessageDialog(null, "Entered Credentials do not match!");//notify the end user with a joption pane popup that the entered credentials didnt match
@@ -223,40 +223,40 @@ public class LoginPageGUI extends javax.swing.JFrame {
 
     private void emailFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_emailFieldKeyPressed
 String inputText = emailField.getText();
-    int maxLength = 30; 
+    int InpLength = 30; 
 
-    int keyCode = evt.getKeyCode();
+    int code = evt.getKeyCode();
 
-    if ((keyCode >= KeyEvent.VK_A && keyCode <= KeyEvent.VK_Z) || 
-        (keyCode >= KeyEvent.VK_0 && keyCode <= KeyEvent.VK_9) || 
-        keyCode == KeyEvent.VK_BACK_SPACE){
+    if ((code >= KeyEvent.VK_A && code <= KeyEvent.VK_Z) || 
+        (code >= KeyEvent.VK_0 && code <= KeyEvent.VK_9) || 
+        code == KeyEvent.VK_BACK_SPACE){
         
-        if (inputText.length() >= maxLength && keyCode != KeyEvent.VK_BACK_SPACE) {
+        if (inputText.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {
             JOptionPane.showMessageDialog(null, "Maximum 30 characters for email!");
             evt.consume();
         }
     } else {
-        JOptionPane.showMessageDialog(null, "Invalid character. Please use valid email characters.");
+        JOptionPane.showMessageDialog(null, "wrong input. Please use valid email characters.");
         evt.consume();
     }
     }//GEN-LAST:event_emailFieldKeyPressed
 
     private void passwordFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordFieldKeyPressed
         String inputText = passwordField.getText();
-    int maxLength = 30; 
+    int InpLength = 30; 
 
-    int keyCode = evt.getKeyCode();
+    int code = evt.getKeyCode();
 
-    if ((keyCode >= KeyEvent.VK_A && keyCode <= KeyEvent.VK_Z) || 
-        (keyCode >= KeyEvent.VK_0 && keyCode <= KeyEvent.VK_9) || 
-        keyCode == KeyEvent.VK_BACK_SPACE){
+    if ((code >= KeyEvent.VK_A && code <= KeyEvent.VK_Z) || 
+        (code >= KeyEvent.VK_0 && code <= KeyEvent.VK_9) || 
+        code == KeyEvent.VK_BACK_SPACE){
         
-        if (inputText.length() >= maxLength && keyCode != KeyEvent.VK_BACK_SPACE) {
+        if (inputText.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {
             JOptionPane.showMessageDialog(null, "Maximum 30 characters for email!");
             evt.consume();
         }
     } else {
-        JOptionPane.showMessageDialog(null, "Invalid character. Please use valid email characters.");
+        JOptionPane.showMessageDialog(null, "wrong input. Please use valid email characters.");
         evt.consume();
     }
     }//GEN-LAST:event_passwordFieldKeyPressed
