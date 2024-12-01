@@ -6,7 +6,7 @@ package grantmanagementsystem;
 
 /**
  *
- * @author Gregory Mitchell
+ * @author Gregory Mitchell//chNFE
  */
 import java.util.ArrayList;//import array list to contain the administrator array list
 
