@@ -628,15 +628,20 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
 
         ComputersQuestionLabel5.setText("What does \"GPU\" stand for?");
 
-        ComputerQuizComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Central Processing Unit", "Cornered processing union", "Centrelised Power unit", "Cell processing unit", " ", " " }));
+        ComputerQuizComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Central-Processing-Unit", "Cornered-processing-union", "Centrelised-Power-unit", "Cell-processing-unit", " ", " " }));
+        ComputerQuizComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComputerQuizComboBoxActionPerformed(evt);
+            }
+        });
 
-        ComputerQuizComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Storing data", "Loading graphics", "Executing instructions", "Supply power", " " }));
+        ComputerQuizComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Storing-data", "Loading graphics", "Executing instructions", "Supply power", " " }));
 
-        ComputerQuizComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Power Shell Unit", "Power Supply Unit", "Primary suppy unit", "Perfect supply unit" }));
+        ComputerQuizComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Power Shell Unit", "Power-Supply-Unit", "Primary suppy unit", "Perfect supply unit" }));
 
-        ComputerQuizComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Store Some Data", "Save Some Data", "Solid State Drive", "Store State Drive", " " }));
+        ComputerQuizComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Store Some Data", "Save Some Data", "Solid-State-Drive", "Store State Drive", " " }));
 
-        ComputerQuizComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Graphical Processing Unit", "Graphic Prone Unit", "Graphics Processing Under", "Game Processing Unit", " " }));
+        ComputerQuizComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Graphical-Processing-Unit", "Graphic Prone Unit", "Graphics Processing Under", "Game Processing Unit", " " }));
 
         ComputersClearBTN.setText("Clear ");
         ComputersClearBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1341,22 +1346,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
     }//GEN-LAST:event_ContactUsReviewDateFormattedFieldActionPerformed
 
     private void ContactUsReviewDateFormattedFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ContactUsReviewDateFormattedFieldKeyPressed
-        String Text = ContactUsReviewDateFormattedField.getText();//get text as a string from the Field element within the GUI
-        int InpLength = 30;//setting the length limit of the field
 
-        int code = evt.getKeyCode();//getting code for key pressed
-
-        if ((code >= KeyEvent.VK_0 && code <= KeyEvent.VK_9)//if condition to ensure the end user is only able to enter the expected input and cant break the program
-                || code == KeyEvent.VK_BACK_SPACE) {//allow the end user to hit backspace
-
-            if (Text.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {//allow backspace if the limit is reached
-                JOptionPane.showMessageDialog(null, "Most allowed is 30 inputs for review!");//notify the end user if it was succesful or not using j option pane popup
-                evt.consume();//stops the key press from happenign
-            }//end if
-        } else {//start else if condition
-            JOptionPane.showMessageDialog(null, "Wrong input. Please use valid date // or digit/ inputs.");//notify the end user if it was succesful or not using j option pane popup
-            evt.consume();//stops the key press from happenign
-        }//end if
     }//GEN-LAST:event_ContactUsReviewDateFormattedFieldKeyPressed
 
     private void ContactUsSurnameFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ContactUsSurnameFieldKeyPressed
@@ -1380,23 +1370,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
     }//GEN-LAST:event_ContactUsSurnameFieldKeyPressed
 
     private void ContactUsEmailFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ContactUsEmailFieldKeyPressed
-        String Text = ContactUsEmailField.getText();//get text as a string from the Field element within the GUI
-        int InpLength = 30;//setting the length limit of the field
 
-        int code = evt.getKeyCode();//getting code for key pressed
-
-        if ((code >= KeyEvent.VK_A && code <= KeyEvent.VK_Z)//if condition to ensure the end user is only able to enter the expected input and cant break the program
-                || (code >= KeyEvent.VK_0 && code <= KeyEvent.VK_9)//if condition to ensure the end user is only able to enter the expected input and cant break the program
-                || code == KeyEvent.VK_BACK_SPACE) {//allow the end user to hit backspace
-
-            if (Text.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {//allow backspace if the limit is reached
-                JOptionPane.showMessageDialog(null, "Most allowed is 30 inputs for email!");//notify the end user if it was succesful or not using j option pane popup
-                evt.consume();//stops the key press from happenign
-            }//end if
-        } else {//start else if condition
-            JOptionPane.showMessageDialog(null, "Wrong input. Please use valid email inputs.");//notify the end user if it was succesful or not using j option pane popup
-            evt.consume();//stops the key press from happenign
-        }//end if
     }//GEN-LAST:event_ContactUsEmailFieldKeyPressed
 
     private void SendFeedbackBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SendFeedbackBTNActionPerformed
@@ -1884,6 +1858,10 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         }//end if
     }//GEN-LAST:event_ReportGeneratorDateFieldKeyPressed
 
+    private void ComputerQuizComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComputerQuizComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComputerQuizComboBoxActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1909,6 +1887,10 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(EducationalEnviormentGUIGregory.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>

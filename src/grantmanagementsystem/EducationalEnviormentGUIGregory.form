@@ -1047,15 +1047,18 @@
                               <Properties>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                   <StringArray count="6">
-                                    <StringItem index="0" value="Central Processing Unit"/>
-                                    <StringItem index="1" value="Cornered processing union"/>
-                                    <StringItem index="2" value="Centrelised Power unit"/>
-                                    <StringItem index="3" value="Cell processing unit"/>
+                                    <StringItem index="0" value="Central-Processing-Unit"/>
+                                    <StringItem index="1" value="Cornered-processing-union"/>
+                                    <StringItem index="2" value="Centrelised-Power-unit"/>
+                                    <StringItem index="3" value="Cell-processing-unit"/>
                                     <StringItem index="4" value=" "/>
                                     <StringItem index="5" value=" "/>
                                   </StringArray>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ComputerQuizComboBoxActionPerformed"/>
+                              </Events>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
@@ -1064,7 +1067,7 @@
                               <Properties>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                   <StringArray count="5">
-                                    <StringItem index="0" value="Storing data"/>
+                                    <StringItem index="0" value="Storing-data"/>
                                     <StringItem index="1" value="Loading graphics"/>
                                     <StringItem index="2" value="Executing instructions"/>
                                     <StringItem index="3" value="Supply power"/>
@@ -1081,7 +1084,7 @@
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                   <StringArray count="4">
                                     <StringItem index="0" value="Power Shell Unit"/>
-                                    <StringItem index="1" value="Power Supply Unit"/>
+                                    <StringItem index="1" value="Power-Supply-Unit"/>
                                     <StringItem index="2" value="Primary suppy unit"/>
                                     <StringItem index="3" value="Perfect supply unit"/>
                                   </StringArray>
@@ -1097,7 +1100,7 @@
                                   <StringArray count="5">
                                     <StringItem index="0" value="Store Some Data"/>
                                     <StringItem index="1" value="Save Some Data"/>
-                                    <StringItem index="2" value="Solid State Drive"/>
+                                    <StringItem index="2" value="Solid-State-Drive"/>
                                     <StringItem index="3" value="Store State Drive"/>
                                     <StringItem index="4" value=" "/>
                                   </StringArray>
@@ -1111,7 +1114,7 @@
                               <Properties>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                   <StringArray count="5">
-                                    <StringItem index="0" value="Graphical Processing Unit"/>
+                                    <StringItem index="0" value="Graphical-Processing-Unit"/>
                                     <StringItem index="1" value="Graphic Prone Unit"/>
                                     <StringItem index="2" value="Graphics Processing Under"/>
                                     <StringItem index="3" value="Game Processing Unit"/>
